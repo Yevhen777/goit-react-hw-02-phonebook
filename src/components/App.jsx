@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import style from './ContactForm.module.css';
 
 import { ContactForm } from 'components/ContactForm';
 import { Filter } from 'components/Filter';
@@ -64,7 +65,7 @@ export class App extends Component {
     const visibleContacts = this.getVisibleContacts();
 
     return (
-      <div>
+      <div className={style.allForm}>
         <h1>Phone Book</h1>
         <ContactForm
           initialValues={this.state}

@@ -1,4 +1,5 @@
 .form {
+  padding-left: 10px;
   border: 1px solid rgb(3, 3, 3);
   width: 500px;
   display: flex;
@@ -12,6 +13,7 @@
   border: 1px solid rgb(189, 192, 189);
   height: 18px;
 }
+
 .input {
   border: 1px solid rgb(189, 192, 189);
   height: 18px;
@@ -40,8 +42,11 @@
 }
 
 .addContact {
-  font-size: 1.2em;
-  font-weight: bold;
+  font-size: 1.5em;
+  font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.allForm {
+  padding-left: 20px;
 }
