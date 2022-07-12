@@ -68,9 +68,6 @@ export class App extends Component {
         <ContactForm
           initialValues={this.state}
           handleSubmit={this.handleSubmit}
-          handleChange={this.handleChange}
-          name={this.state.name}
-          number={this.state.number}
         />
         <h2>Contacts</h2>
         <Filter
@@ -90,9 +87,6 @@ export class App extends Component {
 ContactForm.propTypes = {
   initialValues: PropTypes.object,
   handleSubmit: PropTypes.func,
-  handleChange: PropTypes.func,
-  name: PropTypes.string,
-  number: PropTypes.string,
 };
 
 Filter.propTypes = {

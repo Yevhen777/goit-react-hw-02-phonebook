@@ -16,9 +16,7 @@ let schema = yup.object().shape({
 
 export const ContactForm = ({
   handleSubmit,
-  handleChange,
-  name,
-  number,
+
   initialValues,
 }) => {
   return (
