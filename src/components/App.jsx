@@ -64,7 +64,7 @@ export class App extends Component {
 
     return (
       <div className={style.allForm}>
-        <h1>Phone Book</h1>
+        <h1>Phonebook</h1>
         <ContactForm
           initialValues={this.state}
           handleSubmit={this.handleSubmit}
