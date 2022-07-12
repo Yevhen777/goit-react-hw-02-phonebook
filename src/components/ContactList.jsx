@@ -4,7 +4,6 @@ export const ContactList = ({ visibleContacts, deleteContact }) => {
   return (
     <ul>
       {visibleContacts.map(contact => {
-        console.log('contact :>> ', contact);
         return (
           <li className={style.addContact} key={nanoid()}>
             {contact.name}: {contact.number}

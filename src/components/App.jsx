@@ -5,7 +5,6 @@ import style from './ContactForm.module.css';
 import { ContactForm } from 'components/ContactForm';
 import { Filter } from 'components/Filter';
 import { ContactList } from 'components/ContactList';
-// import { Formik, Form } from 'formik';
 
 export class App extends Component {
   state = {
@@ -14,30 +13,29 @@ export class App extends Component {
     number: '',
     filter: '',
   };
+
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
-  handleSubmit = evt => {
-    evt.preventDefault();
-
-    if (this.state.contacts.find(el => el.name === this.state.name)) {
-      alert(`${this.state.name} is already in contacs`);
-      this.reset();
+  handleSubmit = (evt, actions) => {
+    if (this.state.contacts.find(el => el.name === evt.name)) {
+      alert(`${evt.name} is already in contacs`);
+      actions.resetForm();
       return;
     }
 
-    const { name, number } = evt.target.elements;
-
     const contactInput = {
-      id: name.value,
-      name: name.value,
-      number: number.value,
+      id: evt.name,
+      name: evt.name,
+      number: evt.number,
     };
     const newContact = [...this.state.contacts, contactInput];
 
     this.setState({ contacts: newContact });
-    this.reset();
+
+    actions.resetForm();
   };
+
   reset = () => {
     this.setState({ name: '', number: '' });
   };

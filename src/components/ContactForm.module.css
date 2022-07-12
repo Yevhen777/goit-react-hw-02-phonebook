@@ -34,7 +34,7 @@
   border: 1px solid rgb(189, 192, 189);
   height: 18px;
 }
-.btn:focus {
+.btn:hover {
   background-color: rgb(45, 15, 177);
   border-radius: 5px;
   color: rgb(2, 10, 10);
@@ -49,4 +49,8 @@
 }
 .allForm {
   padding-left: 20px;
+}
+
+.error {
+  color: red;
 }
